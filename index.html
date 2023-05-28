@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script src="https://cdn.scaledrone.com/scaledrone.min.js"></script>
+  <title>Video Chat</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="video-container">
+      <video id="remoteVideo" autoplay playsinline></video>
+      <div id="local-video-container">
+        <video id="localVideo" autoplay muted playsinline></video>
+        <div id="video-control">
+          <img id="switch-camera" class="video-control-button" src="images/camera-switch.png" alt="Switch Camera" onclick="switchCamera()">
+          <img id="mute-switch" class="video-control-button" src="images/mic.png" alt="Mute" onclick="toggleMute()">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="message-container">
+      <!-- Add this code inside the message-container div, right after the opening tag -->
+      <div class="language-selection">
+        <label for="language"> Chat Language:</label>
+        <select id="language">
+          <option value="en" selected>English</option>
+          <option value="hi">Hindi</option>
+          <option value="es">Spanish</option>
+          <option value="fr">French</option>
+          <option value="uk">Ukraninan</option>
+          <option value="ru">Russian</option>
+          <!-- Add more languages as needed -->
+        </select>
+      </div>
+      <form id="message-form">
+        <input type="text" id="message-input" placeholder="Type your message" />
+        <button type="submit">Send</button>
+      </form>
+      <div id="messages"></div>
+
+    </div>
+  </div>
+
+
+  <!-- <br><br><br>
+
+  <h3>Made By Koustubh Sahu</h3> -->
+
+  <script>
+    function adjustVideoSize() {
+      const remoteVideo = document.querySelector('#remoteVideo');
+      const localVideo = document.querySelector('#localVideo');
+
+      if (remoteVideo.videoWidth > remoteVideo.videoHeight) {
+        remoteVideo.classList.add('full-height');
+      } else {
+        remoteVideo.classList.remove('full-height');
+      }
+
+      if (localVideo.videoWidth > localVideo.videoHeight) {
+        localVideo.classList.add('full-height');
+      } else {
+        localVideo.classList.remove('full-height');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const remoteVideo = document.querySelector('#remoteVideo');
+      const localVideo = document.querySelector('#localVideo');
+
+      remoteVideo.addEventListener('loadedmetadata', adjustVideoSize);
+      localVideo.addEventListener('loadedmetadata', adjustVideoSize);
+    });
+  </script>
+
+
+  <script src="server.js"></script>
+</body>
+
+</html>
