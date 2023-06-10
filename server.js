@@ -1,4 +1,10 @@
-const AZURE_TRANSLATOR_API_KEY = '1fa1772cb23d42d6a5b84cb94c006dd3';
+// account 1
+// const AZURE_TRANSLATOR_API_KEY = '1fa1772cb23d42d6a5b84cb94c006dd3';
+// const AZURE_TRANSLATOR_API_ENDPOINT = 'https://api.cognitive.microsofttranslator.com/';
+// const AZURE_TRANSLATOR_API_REGION = 'eastus';
+
+// account 2
+const AZURE_TRANSLATOR_API_KEY = '35d77e3b9e364a4f84f1bf0e49b5bba6';
 const AZURE_TRANSLATOR_API_ENDPOINT = 'https://api.cognitive.microsofttranslator.com/';
 const AZURE_TRANSLATOR_API_REGION = 'eastus';
 
@@ -308,13 +314,6 @@ async function switchCamera() {
   // Update the local stream
   localStream = newStream;
 }
-
-
-
-
-
-
-
 
 
 
