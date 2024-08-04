@@ -1,8 +1,8 @@
 # Translate Call
 
-Translate Call is a web application designed to facilitate seamless communication across language barriers. It enables real-time messaging and video chat with integrated message translation using Azure API, offering a robust solution for multilingual conversations.
+Translate Call is a web application that facilitates seamless communication across language barriers. It enables real-time messaging and video chat with integrated message translation using Azure API, offering a robust solution for multilingual conversations.
 
-![Translate Call Screenshot](ss.png)
+![Translate Call Screenshot](translate_call_ss.png)
 
 ## Key Features
 
